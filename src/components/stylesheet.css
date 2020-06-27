@@ -1,0 +1,137 @@
+#FORM_VIEW_HEADER {
+  background: #fdfdfd;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: #CC6666;
+  font-size: x-large;
+  text-align: center;
+  border-radius: 9px;
+  border: 16px solid #CC6666;
+  margin: 2vh 20vw 2vh 20vw;
+}
+
+h2 {
+  margin-block-start: auto;
+  margin: 15px 0px 25px 0px;
+}
+
+.form-container {
+  padding: 2px 0px 0px 2px;
+  border: 16px solid #CC6666;
+  margin: 20px 20vw 0px 20vw;
+  border-radius: 9px;
+}
+
+.form-view {
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
+
+/* body { background:rgb(30,30,40); } */
+form { max-width:420px; margin:50px auto; }
+
+.form-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #CC6666;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  padding-top: 10px;
+  outline:0;
+}
+
+.form-input:focus { border:2px solid #CC4949; }
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 20px;
+    color: #333333;
+}
+
+label {
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 20px;
+    color: #333333;
+    margin-left: 10px;
+    line-height: 1.4em
+}
+
+span {
+    margin-left: 10px;
+}
+[type="radio"] {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    background: #fff;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#CC6666;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:25px;
+  font-weight:700;
+}
+[type="submit"]:hover { 
+    background:#CC4949;
+}
+
+.invalid {
+  width: 100%;
+  margin-top: -0.75rem;
+  font-size: 100%;
+  color: #dc3545;
+}
+
+.submit-popup {
+  display: none;
+  position: fixed;
+  text-align: center;
+  z-index: 9;
+  width: 40vw;
+  padding: 2px 0px 0px 2px;
+  border: 8px solid #CC6666;
+  margin: 20px 20vw 0px 30vw;
+  border-radius: 9px;
+  bottom: 50%;
+}
+
+.ok-button {
+  margin: 0px 15vw 2vh 15vw;
+  width: 25%;
+}
+
+.content {
+  height: 100%;
+  display: inline;
+  -webkit-filter: blur(8px);
+  height: 100%;
+}
