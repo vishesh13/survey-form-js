@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import SurveyApp from './SurveyApp';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <SurveyApp />,
   document.getElementById('root')
 );

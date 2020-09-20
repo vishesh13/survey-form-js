@@ -1,7 +1,7 @@
 {
   "homepage": "https://vishesh13.github.io/survey-form-js",
   "name": "survey-form-js",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "express-validator": "^6.5.0",

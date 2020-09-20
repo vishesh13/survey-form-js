@@ -19,17 +19,17 @@ h2 {
   border: 16px solid #CC6666;
   margin: 20px 20vw 0px 20vw;
   border-radius: 9px;
+  overflow-y: scroll;    
+  height: 750px;    
+  max-height: 750px;
 }
 
 .form-view {
   max-width: 420px;
-  margin: 50px auto;
+  margin: 30px auto;
+  overflow-y: revert;
 }
 
-
-/* @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700); */
-
-/* body { background:rgb(30,30,40); } */
 form { max-width:420px; margin:50px auto; }
 
 .form-input {
@@ -130,8 +130,7 @@ span {
 }
 
 .content {
-  height: 100%;
   display: inline;
-  -webkit-filter: blur(8px);
   height: 100%;
+  -webkit-filter: blur(8px);
 }
