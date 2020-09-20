@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SurveyFormContainer from './components/SurveyFormContainer';
 
-class App extends Component {
+class SurveyApp extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default SurveyApp;

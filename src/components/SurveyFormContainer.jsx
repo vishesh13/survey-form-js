@@ -27,6 +27,7 @@ class SurveyFormContainer extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.validateData = this.validateData.bind(this);
         this.handleSubmissionNotification = this.handleSubmissionNotification.bind(this);
+        this.debounce = this.debounce.bind(this)
     }
 
     componentDidUpdate() {
@@ -34,25 +35,21 @@ class SurveyFormContainer extends React.Component {
             document.getElementById('CONTENT_VIEW').style.display = "block";
             document.getElementById('SUBMISSION_MODAL').style.display = "block";
         }
+    }
 
-        // if (this.state.hasSubmitted) {
-        //     this.setState(() => {
-        //         return {
-        //             hasSubmitted: false,
-        //             details: {
-        //                 name: '',
-        //                 email: '',
-        //                 contact: '',
-        //                 questions: Array(3).fill('')
-        //             },
-        //             errors: {
-        //                 mail: false,
-        //                 number: false,
-        //                 nameField: false
-        //             }
-        //         }
-        //     })
-        // }
+    /**
+     * Debouncing function to validate name field character count
+     */
+    debounce() {
+        setTimeout(() =>
+            this.setState((prevState) => {
+                return {
+                    ...prevState,
+                    errors: {
+                        nameField: document.getElementById('INPUT_NAME').value.length < 4 ? true : false
+                    }
+                }
+            }), 1000)
     }
 
     /**
@@ -87,12 +84,10 @@ class SurveyFormContainer extends React.Component {
                         email: document.getElementById('INPUT_EMAIL').value,
                         contact: document.getElementById('INPUT_CONTACT').value,
                         questions: prevState.details.questions
-                    },
-                    errors: {
-                        nameField: (document.getElementById('INPUT_NAME').value.length > 3) ? false : true
                     }
                 }
             })
+            this.debounce();
         }
     }
 
@@ -172,13 +167,14 @@ class SurveyFormContainer extends React.Component {
     resetRadioButtons = (radioSelection) => {
         radioSelection.forEach((r) => {
             r.checked = false
-            })
+        })
     }
 
     render() {
         return (
             <React.Fragment>
-                <SurveyFormView details={this.state.details} errors={this.state.errors} handleOnChange={this.handleOnChange} handleRadioButtonSelection={this.handleRadioButtonSelection} handleSubmit={this.handleSubmit} />
+                <SurveyFormView details={this.state.details} errors={this.state.errors} handleNameFieldChange={this.handleNameFieldChange}
+                    handleOnChange={this.handleOnChange} handleRadioButtonSelection={this.handleRadioButtonSelection} handleSubmit={this.handleSubmit} />
                 <SubmissionModalView handleSubmissionNotification={this.handleSubmissionNotification} />
             </React.Fragment>
         )
